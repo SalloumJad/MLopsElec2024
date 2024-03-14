@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/288639591324203183/16bde164faa64c2fbd1e87b86efde422/artifacts
+end_time: 1710426542047
+entry_point_name: ''
+experiment_id: '288639591324203183'
+lifecycle_stage: active
+run_id: 16bde164faa64c2fbd1e87b86efde422
+run_name: caring-snipe-331
+run_uuid: 16bde164faa64c2fbd1e87b86efde422
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710426541993
+status: 3
+tags: []
+user_id: jadsa

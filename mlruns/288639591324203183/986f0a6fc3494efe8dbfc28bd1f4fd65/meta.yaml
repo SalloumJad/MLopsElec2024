@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/288639591324203183/986f0a6fc3494efe8dbfc28bd1f4fd65/artifacts
+end_time: 1710426717947
+entry_point_name: ''
+experiment_id: '288639591324203183'
+lifecycle_stage: active
+run_id: 986f0a6fc3494efe8dbfc28bd1f4fd65
+run_name: gentle-duck-950
+run_uuid: 986f0a6fc3494efe8dbfc28bd1f4fd65
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710426717902
+status: 3
+tags: []
+user_id: jadsa
