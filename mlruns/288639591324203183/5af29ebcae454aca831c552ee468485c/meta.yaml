@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/288639591324203183/5af29ebcae454aca831c552ee468485c/artifacts
+end_time: 1710429476150
+entry_point_name: ''
+experiment_id: '288639591324203183'
+lifecycle_stage: active
+run_id: 5af29ebcae454aca831c552ee468485c
+run_name: defiant-duck-930
+run_uuid: 5af29ebcae454aca831c552ee468485c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710429476095
+status: 3
+tags: []
+user_id: jadsa

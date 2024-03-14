@@ -1,15 +1,14 @@
 import mlflow
 
-remote_server_uri = "http://localhost:8088"
+remote_server_uri = "http://localhost:8080"
 mlflow.set_tracking_uri(remote_server_uri)
 
 # set experiment
-mlflow.set_experiment("experiment_01")
+mlflow.set_experiment("/experiment_01")
 
 mlflow.sklearn.autolog()
 
 import pandas as pd
-
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 60
 pd.options.display.max_colwidth = 100
@@ -20,6 +19,7 @@ import numpy as np
 import typing as t
 from collections import Counter
 from sklearn.preprocessing import OrdinalEncoder
+
 
 from sklearn.model_selection import train_test_split, GridSearchCV, KFold
 from sklearn.ensemble import RandomForestClassifier
