@@ -1,17 +1,22 @@
+import re
+import typing as t
+from collections import Counter
+import json
+import datetime
+import numpy as np
 import pandas as pd
+from sklearn.preprocessing import OrdinalEncoder
+
+
+
 pd.options.display.max_columns = 100
 pd.options.display.max_rows = 60
 pd.options.display.max_colwidth = 100
 pd.options.display.precision = 10
 pd.options.display.width = 160
 pd.set_option("display.float_format", "{:.4f}".format)
-import numpy as np
-import re
-import typing as t
-from collections import Counter
-from sklearn.preprocessing import OrdinalEncoder
-import json
-import datetime
+
+
 
 
 def rename_columns(columns: t.List[str]) -> t.List[str]:
@@ -30,7 +35,7 @@ def rename_columns(columns: t.List[str]) -> t.List[str]:
     return columns
 
 
-data = pd.read_csv('./data/dpe_tertiaire_20240314.csv')
+data = pd.read_csv("./data/dpe_tertiaire_20240314.csv")
 
 """
 Simplifier le nom des colonnes
@@ -174,10 +179,7 @@ for col in columns_categorical:
 # save categorical mappings
 mappings = {}
 for i, col in enumerate(encoder.feature_names_in_):
-    mappings[col] = {
-        int(value): category
-        for value, category in enumerate(encoder.categories_[i])
-    }
+    mappings[col] = {int(value): category for value, category in enumerate(encoder.categories_[i])}
 
 # Save the mappings to a JSON file
 with open("./categorical_mappings.json", "w", encoding="utf-8") as f:
@@ -268,9 +270,7 @@ data = data[features].copy()
 data.reset_index(inplace=True, drop=True)
 
 # save to file
-output_file = (
-    f"./data/dpe_processed_{datetime.datetime.now().strftime('%Y%m%d')}.csv"
-)
+output_file = f"./data/dpe_processed_{datetime.datetime.now().strftime('%Y%m%d')}.csv"
 
 
 data.to_csv(output_file, index=False)
